@@ -1,0 +1,17 @@
+<script src="fancysettings/source/lib/store.js"></script>
+<script>
+var settings = new Store("settings", {
+	
+	"setting1": true
+	
+});
+</script>
+<script>
+function onRequest(request, sender, callback) {
+	if (request.name == 'settings')
+		callback(settings.toObject());
+};
+
+// Wire up the listener.
+chrome.extension.onRequest.addListener(onRequest);
+</script>

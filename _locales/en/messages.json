@@ -1,0 +1,14 @@
+{
+	"extName": { "message": "Golden View Friendfeed Image Zoom" },
+
+	"options": { "message": "Options" },
+	"options_features": { "message": "Features" },
+	"options_bugs": { "message": "Bugs" },
+	"options_author": { "message": "Author" },
+	"options_report_bug": { "message": "Caught a bug? Report it on github" },
+	"options_report_bug_button": { "message": "Report Bug" },
+	"options_extension_page": { "message": "Visit the extension page to leave a snazzy review" },
+	"options_extension_page_button": { "message": "Extension Page" },
+	"options_developer_page": { "message": "Follow or complain directly to the developer on Friendfeed" },
+	"options_developer_page_button": { "message": "Micah Wittman on Friendfeed" }
+}

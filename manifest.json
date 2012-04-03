@@ -1,0 +1,21 @@
+{
+	"background_page": "background.html",
+	"content_scripts": [ {
+		"all_frames": true,
+		"js": [ "jquery.js", "script.js" ],
+		"matches": [ "http://friendfeed.com/*", "https://friendfeed.com/*" ],
+		"run_at": "document_start"
+	} ],
+	"description": "For friendfeed.com - opens a post image in a new browser tab at full size (not bookmarklet images, only native image uploads).",
+	"icons": {
+		"128": "icon128.png",
+		"16": "icon16.png",
+		"32": "icon32.png",
+		"64": "icon64.png"
+	},
+	"options_page": "fancysettings/source/index.html",
+	"name": "Golden View Friendfeed Image Zoom",
+	"update_url": "http://clients2.google.com/service/update2/crx",
+	"default_locale": "en",
+	"version": "1.0"
+}
