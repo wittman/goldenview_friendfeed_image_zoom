@@ -12,6 +12,10 @@ Google Chrome Extension for friendfeed.com - opens a post image in a new browser
 
 ## Change Log
 
+### Version 1.1
+
+- Enhanced security - expected 40-character, [a-z 0-9] image identifier in URL fragment is prerequisite for proceeding to insert an <img> tag into page.
+
 ### Version 1.0
 
 - Initial Release

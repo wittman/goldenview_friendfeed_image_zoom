@@ -4,11 +4,15 @@ var isJsPage = !!window.location.href.match(/_\/apps-static\//);
 
 
 function image_show(){
-	var img_src = window.location.hash.replace(/#/,'');
-    $('#container').css({maxWidth:'none', width:'auto'});
-	$('#sidebar, .box-body *').hide();
+	var img_src = window.location.hash.match(/(#)([a-z 0-9]{40})$/);
+	if( (img_src !== null) && img_src.hasOwnProperty('2') ){
+	    $('#container').css({maxWidth:'none', width:'auto'});
+		$('#sidebar, .box-body *').hide();
+		$('#page .box-body').prepend('<img src="http://m.friendfeed-media.com/' + img_src[2] + '">');
+	}else{
+		$('#page .box-body').prepend('<div style="color:red;font-size:14px;margin:2em">ERROR: Incorrect image identifier in URL fragment. Image cannot be displayed.</div>');
+	}
 	$('.box-bar-text a').attr('href', '#').text('Friendfeed Image Zoom Extension by Micah Wittman');
-	$('#page .box-body').prepend('<img src="http://m.friendfeed-media.com/' + img_src + '">');
 }
 
 function image_zoom(){
