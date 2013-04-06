@@ -17,9 +17,9 @@ function image_show(){
 
 function image_zoom(){
 	function main_loop(){
-		var imgs = $('#feed .ebody .media .container img.thumbnail');
+		var imgs = $('#feed .ebody .media .container img.thumbnail, #feed .comments .comment .content a');
 		$(imgs).each(function(){
-			var a = $(this).parent();
+			var a = $(this).attr('href') ? $(this) : $(this).parent();
 			var img_lg_href = a.attr('href');
 			if( img_lg_href.indexOf('http://m.friendfeed-media.com/') == 0 ){
 				var img_src_name =  img_lg_href.split("/")[3];
